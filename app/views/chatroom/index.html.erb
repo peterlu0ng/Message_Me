@@ -7,50 +7,20 @@
     <div class="twelve wide column">
          <div class="ui fluid raised card chatbox">
             <div class="content">
-                <%# Chat feed %>
-                <div class="ui feed">
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Elliot Fu</em>: Test Message
-                    </div>
+                    <div class="ui feed">
+                        <%= render @messages %>
                     </div>
                 </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-                    </div>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Helen Troy</em> added <a>Christian Rocha</a> as a friend
-                    </div>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <a>Christian Rocha</a> signed up for the  site.
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
               <div class="extra content">
                   <form class="ui reply form">
                     <div class="field">
                         <div class="ui fluid icon input">
                               <input type="text" placeholder="Enter a message...">
                         <i class="bordered inverted orange edit icon"></i>
-                        
                         </div>
                     </div>
                 </form>
               </div>
-
         </div>
     </div>
     <div class="four wide column">
