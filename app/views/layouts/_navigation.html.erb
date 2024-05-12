@@ -1,21 +1,25 @@
-
-<%= link_to "Chatroom", root_path, class:"item"%>
-<a class="item">
-    Messages
-</a>
-<div class="right menu">
-    <div class="ui simple dropdown item">
-    Account 
-    <i class="dropdown icon"></i>
-    <div class="menu">
-        <% if logged_in? %>
-        <%= link_to "Logout", logout_path, data: {turbo_method: :delete}, class: "item" %>
-        <% else %>
-            <%= link_to "Log in", login_path, class:"item"%>
-        <% end %>
+<div class="ui small inverted menu">
+  <div class="ui container">
+    <%= link_to "Chatroom", root_path, class: "item" %>
+    <a class="item">
+      Messages
+    </a>
+    <div class="right menu">
+      <div class="ui simple dropdown item">
+        Account <i class="dropdown icon"></i>
+          <div class="menu">
+            <% if logged_in? %>
+              <%= link_to "Logout", logout_path, class: "item", data:{ turbo_method: :delete} %>
+            <% else %>
+              <%= link_to "Log in", login_path, class: "item" %>
+            <% end %>
+          </div>
+      </div>
+      <% if !logged_in? %>
+        <div class="item">
+          <%= link_to "Log in", login_path, class: "ui primary button" %>
+        </div>
+      <% end %>
     </div>
-    </div>
-    <div class="item">
-        <div class="ui primary button">Sign Up</div>
-    </div>
+  </div>
 </div>
