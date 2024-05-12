@@ -18,3 +18,4 @@ $(document).on('turbo:load', function() {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
     }
   })
+  
