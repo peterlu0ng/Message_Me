@@ -3,6 +3,7 @@ import consumer from "channels/consumer"
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
     // Called when the subscription is ready for use on the server
+    console.log("Connected to chatroom...")
   },
 
   disconnected() {
@@ -10,7 +11,7 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
-    alert (data.foo);
-  }
+    var element = document.getElementById("message-container");
+    element.innerHTML += data.mod_message;
+    },
 });
