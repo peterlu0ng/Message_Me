@@ -5,6 +5,7 @@ import * as jquery from "jquery"
 window.jQuery = jquery
 window.$ = jquery
 import "semantic-ui"
+import "channels"
 
 $(document).on('turbo:load', function(){
     console.log('loaded turbo links')
